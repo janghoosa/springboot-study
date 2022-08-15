@@ -1,5 +1,6 @@
 package com.janghoosa.book.springboot.domain.posts;
 
+import com.janghoosa.book.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter // from lombok - 클래스 내의 모든 필드의 Getter 메소드를 자동생성
 @NoArgsConstructor // from lombok - 기본 생성자 자동 추가
 @Entity // from JPA
-public class Posts {
+public class Posts extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -27,6 +28,11 @@ public class Posts {
         this.title = title;
         this.content = content;
         this.author = author;
+    }
+
+    public void update(String title, String content){
+        this.title = title;
+        this.content = content;
     }
 //    Entity 클래스에는 절대 Setter를 만들지 않는다.
 //    생성자 대신 buider를 쓴다.
