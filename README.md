@@ -27,3 +27,9 @@
 AWS 서버 환경을 만들어보자 - AWS EC2
 
 - AWS EC2 인스턴스 생성 완료
+
+## 7장
+
+AWS에 데이터베이스 환경을 만들어보자 - AWS RDS
+
+- AWS RDS MySQL 생성 및 연결 완료
